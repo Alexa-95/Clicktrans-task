@@ -1,0 +1,39 @@
+{
+  "name": "clicktrans-taks",
+  "description": "Common Gulp JS minificator",
+  "license": "private",
+  "engines": {
+    "node": "10.22.0"
+  },
+  "version": "1.0.0",
+  "dependencies": {
+    "critical": "^3.1.0",
+    "bower": "^1.8.8",
+    "gulp": "^3.9.0",
+    "gulp-uglify-es": "^1.0.4",
+    "natives": "^1.1.6"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true,
+      "browser": true
+    },
+    "rules": {
+      "quotes": [
+        2,
+        "single"
+      ]
+    }
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "IE 10"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "gulp-babel": "^8.0.0"
+  }
+}
