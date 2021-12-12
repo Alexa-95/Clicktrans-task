@@ -1,13 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/stylesheet.scss">
+  <link rel="stylesheet" href="./dist/css/main.css">
   <title>Document</title>
 </head>
+
 <body>
-  <script type="module" src="script/index.js"></script>
+  <div class="gridMain">
+    <div class="gridForm">
+      <h1>Deafult form</h1>
+      <form action="" method="post" id="mainForm">
+        <!-- textarea -->
+        <div id="gridTextarea">
+          <label for="description">Description</label>
+          <textarea 
+          id="description" 
+          name="description"
+          form="mainForm"
+          maxlength="255"
+          required
+          >
+        </textarea>
+      </div>
+        <!-- Radio -->
+        <div id="gridRadio">
+          <p>Send confirmation</p>
+          <div class="option">
+            <input type="radio" id="typeYes" name="type" required="required">
+            <label for="typeYes">YES</label>
+          </div>
+          <div class="option">
+            <input type="radio" id="typeNo" name="type" required="required">
+            <label for="typeNo">NO</label>
+          </div>
+        </div>
+          <!-- select -->
+          <div id="gridSelect">
+            <label for="vat">VAT</label>
+            <select name="vat" id="vat" required>
+              <option value="" disabled selected>Choose VAT</option>
+              <option value="19">19%</option>
+              <option value="21">21%</option>
+              <option value="23">23%</option>
+              <option value="25">25%</option>
+            </select>
+          </div>
+        <!-- input price netto -->
+        <div id="inputNettoPrice">
+          <label for="priceNetto">Price netto EUR</label>
+          <input type="text" name="priceNetto" id="priceNetto" inputmode="number" pattern="[0-9]{*}[0-9]{2}" value="0.00" min="0.00" step="0.01" required>
+        </div>
+        <!-- input price brutto -->
+        <div id="inputBruttoPrice">
+          <label for="priceBrutto">Price brutto EUR</label>
+          <input type="text" name="priceBrutto" id="priceBrutto" inputmode="number" pattern="[0-9]{*}[0-9]{2}" value="0.00" min="0.00" step="0.01" disabled>
+        </div>
+        <!-- Submit -->
+        <input type="submit" id="submitButton" name="submitButton" value="Submit" disabled>
+      </form>
+    </div>
+  </div>
+  <script src="./dist/js/index.js"></script>
 </body>
+
 </html>
