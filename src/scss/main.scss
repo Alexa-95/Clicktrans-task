@@ -19,12 +19,13 @@ body {
 }
 
 .gridMain {
+  margin: auto;
+  width: 100%;
+  max-width: 640px;
   .gridForm{
     display: block;
-    margin: 25px auto;
+    margin: 25px;
     padding: 15px;
-    width: 100%;
-    max-width: 740px;
-    border: 1px solid $gridBorder;
+    border: 1px solid $gridBorder;    
   }
 }

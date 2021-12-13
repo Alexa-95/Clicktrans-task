@@ -1,0 +1,31 @@
+#gridTextarea{}
+#gridRadio{}
+#gridSelect{}
+#inputNettoPrice{}
+#inputBruttoPrice{}
+#submitButton{
+  display: block;
+  margin: 50px 0 0 auto;
+  outline: none;
+  background-color: $mainAccent;
+  border: 1px solid $mainAccent;
+  padding: 10px 25px;
+  font-weight: 600;
+  color: $colorWhite;
+  box-shadow: 1px 1px 3px $mainAccentPale;
+  transition: box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover:not(&:disabled){
+    box-shadow: 1px 1px 5px $mainAccentPale;
+  }
+  &:focus:not(&:disabled){
+    color: $mainAccent;
+    background-color: $colorWhite;
+  }
+
+  &:disabled{
+    background-color: $mainAccentLight;
+    cursor: default;
+  }
+}
