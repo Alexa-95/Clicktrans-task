@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap');
 @import './variables.scss';
 @import './form.scss';
+@import './input.scss';
 
 *{
   box-sizing: border-box;
@@ -15,6 +16,12 @@ body {
   h1{
     text-align: center;
     font-weight: 600;
+  }
+
+  p{
+    color: $mainAccent;
+    font-weight: 600;
+    font-size: 14px;
   }
 }
 

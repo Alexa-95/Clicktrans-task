@@ -1,14 +1,32 @@
-#gridTextarea{}
-#gridRadio{}
-#gridSelect{}
-#inputNettoPrice{}
-#inputBruttoPrice{}
+#gridTextarea{
+  display: flex;
+  flex-direction: column-reverse;
+}
+#gridRadio{
+  .option{
+    margin-bottom: 15px;
+  }
+}
+#gridSelect,
+#inputNettoPrice,
+#inputBruttoPrice{
+  display: flex;
+  flex-direction: column-reverse;
+  label{
+    font-size: 14px;
+    font-weight: 600;
+    color: $mainAccent;
+    margin: 10px 0;
+  }
+}
+
 #submitButton{
   display: block;
   margin: 50px 0 0 auto;
   outline: none;
   background-color: $mainAccent;
   border: 1px solid $mainAccent;
+  border-radius: 3px;
   padding: 10px 25px;
   font-weight: 600;
   color: $colorWhite;

@@ -1,0 +1,108 @@
+
+textarea {
+  width: 100%;
+  max-width: 320px;
+  height: 180px;
+  padding: 12px;
+  resize: none;
+  border-radius: 3px;
+  border: 2px solid $gridBorder;
+  font-family: 'Sora', sans-serif;
+  outline: unset;
+
+  + label {
+    max-width: 50%;
+    width: fit-content;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #fff;
+    color: $mainAccent;
+    transition: all 0.2s;
+    transform-origin: left bottom;
+    transform: translate(0px,-7px);
+    cursor: default;    
+  }
+  &:focus,
+  &:focus-visible,
+  &:focus-within,
+  &:valid, 
+  &:active {
+    border-color: $mainAccent;
+    & + label{
+      padding: 0 15px;
+      transform: translate(10px, 7px) scale(0.8);
+    }
+  }
+}
+
+input[type="radio"] {
+  display: none;
+
+  & + label {
+    position: relative;
+    display: inline-block;
+    padding-left: 30px;
+    cursor: pointer;
+
+    &:before {
+      position: absolute;
+      display: block;
+      content: "";
+      left: 0;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 2px solid $mainAccent;
+    }
+  }
+
+  &:checked + label:after {
+    background-color: $mainAccent;
+    position: absolute;
+    display: block;
+    content: "";
+    left: 0;
+    top: 15px;
+    transform: translateX(50%) translateY(-100%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+}
+
+select{
+  width: 200px;
+  padding: 12px;
+  border: 2px solid $gridBorder;
+  border-radius: 3px;
+  outline: unset;
+  background-color: $colorWhite;
+
+  option{
+    padding: 12px;
+
+    &:hover{
+      background-color: $gridBorder;
+    }
+  }
+}
+
+input[type="text"] {
+  width: 200px;
+  padding: 12px;
+  border: 2px solid $gridBorder;
+  border-radius: 3px;
+  outline: unset;
+
+  &:focus,
+  &:focus-visible,
+  &:focus-within,
+  &:valid, 
+  &:active{
+    border: 2px solid $mainAccent;
+  }
+}
