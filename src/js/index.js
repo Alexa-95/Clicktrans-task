@@ -1,10 +1,15 @@
-const form = document.getElementById('mainForm');
-const textarea = document.getElementById('description');
-const radioButtons = document.querySelectorAll('[name="type"]');
-const radioButtonsYes = document.getElementById('typeYes');
-const radioButtonsNo = document.getElementById('typeNo');
-const select = document.getElementById('vat').value;
-const priceNetto = document.getElementById('priceNetto').value;
-const priceBrutto = document.getElementById('priceBrutto').value;
+let form = document.getElementById('mainForm');
+let textarea = document.getElementById('description');
+let radioButtons = document.querySelectorAll('[name="type"]');
+let radioButtonsYes = document.getElementById('typeYes');
+let radioButtonsNo = document.getElementById('typeNo');
+let select = document.getElementById('vat');
+let priceNetto = document.getElementById('priceNetto');
+let priceBrutto = document.getElementById('priceBrutto');
 
-// priceBrutto = priceNetto + (priceNetto * select.value);
+// priceBrutto do 2 miejsc po przecinku, to samo cena netto
+// żeby przecinek też był cyfra
+
+function reSum() {
+  priceBrutto.value = parseFloat(select.value) * parseFloat(priceNetto.value) + parseFloat(priceNetto.value);
+}

@@ -16,6 +16,8 @@
       <form action="" method="post" id="mainForm">
         <!-- textarea -->
         <div id="gridTextarea">
+          <span class="error_message">Text is required</span>
+          <span class="error_message">You can’t enter more than 255 characters</span>
           <textarea 
           id="description" 
           name="description"
@@ -29,33 +31,36 @@
         <div id="gridRadio">
           <p>Send confirmation</p>
           <div class="option">
-            <input type="radio" id="typeYes" name="type" required="required">
+            <input type="radio" id="typeYes" name="type" required="required" value="YES">
             <label for="typeYes">YES</label>
           </div>
           <div class="option">
-            <input type="radio" id="typeNo" name="type" required="required">
+            <input type="radio" id="typeNo" name="type" required="required" value="NO">
             <label for="typeNo">NO</label>
           </div>
+          <span class="error_message">Text is required</span>
         </div>
           <!-- select -->
           <div id="gridSelect">
-            <select name="vat" id="vat" required>
+            <span class="error_message">Text is required</span>
+            <select name="vat" id="vat" value='' required>
               <option value="" disabled selected>Choose VAT</option>
-              <option value="0.19">19%</option>
-              <option value="0.21">21%</option>
-              <option value="0.23">23%</option>
-              <option value="0.25">25%</option>
+              <option value="19">19%</option>
+              <option value="21">21%</option>
+              <option value="23">23%</option>
+              <option value="25">25%</option>
             </select>
             <label for="vat">VAT</label>
           </div>
         <!-- input price netto -->
         <div id="inputNettoPrice">
-          <input type="text" name="priceNetto" id="priceNetto" inputmode="number" pattern="" value="0" min="0" step="0.01" required>
+          <span class="error_message">Please, input number</span>
+          <input type="text" name="priceNetto" id="priceNetto" inputmode="number" pattern="" value="0" min="0" step="0.01" onblur="reSum();" required>
           <label for="priceNetto">Price netto EUR</label>
         </div>
         <!-- input price brutto -->
         <div id="inputBruttoPrice">
-          <input type="text" name="priceBrutto" id="priceBrutto" inputmode="number" pattern="" value="0" min="" step="0.01" disabled>
+          <input type="text" name="priceBrutto" id="priceBrutto" inputmode="number" pattern="" min="" step="0.01" disabled>
           <label for="priceBrutto">Price brutto EUR</label>
         </div>
         <!-- Submit -->
